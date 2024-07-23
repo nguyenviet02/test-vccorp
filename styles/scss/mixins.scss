@@ -1,0 +1,29 @@
+@mixin hexagon {
+  position: relative;
+  border-radius: 1em/0.5em;
+  margin: 1em auto;
+  background: orange;
+  height: 17.32em;
+  width: 10em;
+  transition: opacity 0.5s;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+    background: inherit;
+    height: inherit;
+    width: inherit;
+  }
+
+  &:before {
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+  }
+
+  &:after {
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+  }
+}
